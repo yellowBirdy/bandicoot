@@ -227,7 +227,7 @@ def filter_record(records):
 
         return {
             'interaction': r.interaction in ['call', 'text', 'gps', None],
-            'direction': (not_callandtext and r.direction is None) or r.direction in ['in', 'out'],
+            'direction': (not_callandtext and r.direction is [None. '']) or r.direction in ['in', 'out'],
             'correspondent_id': not_callandtext or (r.correspondent_id not in [None, '']),
             'datetime': isinstance(r.datetime, datetime),
             'call_duration': call_duration_ok,
